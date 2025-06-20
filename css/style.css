@@ -1,0 +1,49 @@
+/*reset*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*vars*/
+:root{
+    --scroll-margin-top: 70px;
+
+    --body-backcolor: antiquewhite;
+    --header-backcolor: cornflowerblue;
+    --footer-backcolor: lightgreen;
+}
+/*base*/
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100svh;
+
+    background-color: var(--body-backcolor);
+
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    height: var(--scroll-margin-top);
+
+    background-color: var(--header-backcolor)
+}
+
+main{
+    flex-grow: 1;
+}
+
+footer{
+    height: 100px;
+
+    background-color: var(--footer-backcolor);
+}
+
+#s1{
+    scroll-margin-top: var(--scroll-margin-top);
+}
+/*clases*/
