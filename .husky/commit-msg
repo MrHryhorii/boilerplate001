@@ -1,0 +1,8 @@
+echo ""
+echo "❌ Commit rejected."
+echo "✅ Please use the following command to commit:"
+echo ""
+echo "   npm run commit"
+echo ""
+echo "to create a commit message using the conventional commits format (via Commitizen)."
+exit 1
