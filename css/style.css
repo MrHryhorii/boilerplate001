@@ -86,14 +86,13 @@ footer{
 
 .main-box{
     width: 80%;
+    max-width: 1200px;
+    min-width: 300px;
+    margin: 0 auto;
+
     height: fit-content;
 
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 24px;
-
     border-radius: 10px;
-
     background-color: var(--main-box-backcolor)
 }
 
@@ -110,3 +109,41 @@ footer section{
     height: 100%;
 }
 
+/*Welcome*/
+.Welcome {
+    text-align: center;
+    padding: 3rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.Welcome h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.Welcome p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 0.75rem;
+}
+
+@media (max-width: 600px) {
+    .main-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .small-box {
+        align-self: center;
+        width: 75%;
+    }
+}
+
+@media (max-width: 500px){
+    .small-box {
+        width: 100%;
+    }
+}
