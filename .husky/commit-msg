@@ -1,8 +1,15 @@
+#!/bin/sh
+
+commit_msg_file=$1
+commit_msg=$(cat "$commit_msg_file")
+
+# Дозволити conventional commits
+if echo "$commit_msg" | grep -Eq "^(feat|fix|chore|docs|style|refactor|test|perf)(\(.+\))?: .+"; then
+  exit 0
+fi
+
 echo ""
 echo "❌ Commit rejected."
-echo "✅ Please use the following command to commit:"
-echo ""
-echo "   npm run commit"
-echo ""
-echo "to create a commit message using the conventional commits format (via Commitizen)."
+echo "✅ Please use 'npm run commit' or write a proper conventional commit message."
+echo "   Example: feat(login): add remember me button"
 exit 1
